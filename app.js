@@ -1,6 +1,6 @@
 console.log("script")
 var animals =  ["cat", "dog", "bird", "hedgehog", "moose", "elephant"]
-
+console.log(animals);
 function displayGifs(){
     $("#animal-view").empty();
 
@@ -31,9 +31,9 @@ function displayGifs(){
     });
 };
 
-$(".gif").on("click",function(){
+$(document).on("click", ".gif", function(){
     var state= $(this).attr("data-state");
-
+console.log(state);
     if( state === "still"){
         $(this).attr("src", $(this).attr("data-move"));
         $(this).attr("data-state", "move");
