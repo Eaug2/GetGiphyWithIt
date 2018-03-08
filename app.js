@@ -1,9 +1,9 @@
 console.log("script")
-var animals =  ["cat", "dog", "bird"]
+var animals =  ["cat", "dog", "bird", "hedgehog", "moose", "elephant"]
 
 function displayGifs(){
     $("#animal-view").empty();
-    
+
     var animal= $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + 
     animal + "&api_key=dNqbwZCIrr8ljTJlqyvfF9la5aNT5woE&limit=10"
@@ -21,8 +21,7 @@ function displayGifs(){
         animalDiv.append(p);
         animalDiv.append(animalImage);
         $("#animal-view").prepend(animalDiv);
-    console.log(results);
-    console.log(animal);
+    
     }
     });
 }
