@@ -59,6 +59,7 @@ function renderButtons() {
     for (var i = 0; i < animals.length; i++) {
         var btn = $("<button>");
         btn.addClass("animal-btn");
+        btn.addClass("btn btn-success");
         btn.attr("data-name", animals[i]);
         btn.text(animals[i]);
         $("#buttons-view").append(btn);
